@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My first app</string>
+    <string name="calcola">Calcola</string>
+    <string name="insertFirstNumber">Inserisci il 1° numero:</string>
+    <string name="insertSecondNumber">Inserisci il 2° numero:</string>
+    <string name="sumResult">La somma è: </string>
+    <string name="divisionResult">La divisione è: </string>
+    <string name="subtractionResult">La sottrazione è: </string>
+    <string name="multiplicationResult">La moltiplicazione è: </string>
+
 </resources>
