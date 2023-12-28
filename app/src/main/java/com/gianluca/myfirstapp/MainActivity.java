@@ -10,22 +10,26 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText numberOne, numberTwo;
+    EditText EditNumberOne, EditNumberTwo;
     TextView subtractionResult, sumResult, divisionResult, multiplicationResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        numberOne = findViewById(R.id.numberOne);
-        numberTwo = findViewById(R.id.numberTwo);
+        EditNumberOne = findViewById(R.id.numberOne);
+        EditNumberTwo = findViewById(R.id.numberTwo);
         subtractionResult = findViewById(R.id.subtractionResult);
         sumResult = findViewById(R.id.sumResult);
         divisionResult = findViewById(R.id.divisionResult);
         multiplicationResult = findViewById(R.id.multiplicationResult);
     }
     public void showConfirm(View view){
-        String firstNumber = numberOne.getText().toString();
-        String secondNumber = numberTwo.getText().toString();
+        String firstNumber = EditNumberOne.getText().toString();
+        String secondNumber = EditNumberTwo.getText().toString();
+        if(firstNumber.isEmpty() || secondNumber.isEmpty()){
+            Toast.makeText(MainActivity.this,"Devi inserire entrambi i numberi!",Toast.LENGTH_LONG).show();
+            return;
+        }
         int resultSumNumber = Integer.parseInt(firstNumber) + Integer.parseInt(secondNumber);
         int resultSubNumber = Integer.parseInt(firstNumber) - Integer.parseInt(secondNumber);
         int resultMulNumber = Integer.parseInt(firstNumber) * Integer.parseInt(secondNumber);
